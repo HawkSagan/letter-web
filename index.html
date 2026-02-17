@@ -38,14 +38,15 @@ p{
     margin-bottom:16px;
 }
 
-/* Corazones flotantes */
+/* Corazones */
 .heart{
     position: fixed;
-    bottom: -20px;
-    font-size: 20px;
+    bottom: -80px;
+    font-size: 45px; /* MÁS GRANDES */
     animation: floatUp linear infinite;
-    opacity:0.5;
+    opacity:0.45;
     z-index:1;
+    pointer-events:none;
 }
 
 @keyframes floatUp{
@@ -54,10 +55,10 @@ p{
         opacity:0;
     }
     10%{
-        opacity:0.6;
+        opacity:0.5;
     }
     100%{
-        transform: translateY(-110vh) translateX(30px);
+        transform: translateY(-120vh) translateX(40px);
         opacity:0;
     }
 }
@@ -66,14 +67,21 @@ p{
 
 <body>
 
-<!-- Corazones -->
-<div class="heart" style="left:5%; animation-duration:12s;">💖</div>
-<div class="heart" style="left:15%; animation-duration:18s;">💕</div>
-<div class="heart" style="left:30%; animation-duration:14s;">💗</div>
-<div class="heart" style="left:45%; animation-duration:20s;">💓</div>
-<div class="heart" style="left:60%; animation-duration:16s;">💖</div>
-<div class="heart" style="left:75%; animation-duration:22s;">💕</div>
-<div class="heart" style="left:90%; animation-duration:15s;">💗</div>
+<!-- MUCHOS CORAZONES -->
+<div class="heart" style="left:2%; animation-duration:10s;">💖</div>
+<div class="heart" style="left:8%; animation-duration:14s;">💕</div>
+<div class="heart" style="left:15%; animation-duration:12s;">💗</div>
+<div class="heart" style="left:22%; animation-duration:16s;">💓</div>
+<div class="heart" style="left:30%; animation-duration:11s;">💖</div>
+<div class="heart" style="left:38%; animation-duration:18s;">💕</div>
+<div class="heart" style="left:45%; animation-duration:13s;">💗</div>
+<div class="heart" style="left:52%; animation-duration:15s;">💓</div>
+<div class="heart" style="left:60%; animation-duration:12s;">💖</div>
+<div class="heart" style="left:68%; animation-duration:17s;">💕</div>
+<div class="heart" style="left:75%; animation-duration:11s;">💗</div>
+<div class="heart" style="left:82%; animation-duration:16s;">💓</div>
+<div class="heart" style="left:90%; animation-duration:13s;">💖</div>
+<div class="heart" style="left:96%; animation-duration:15s;">💕</div>
 
 <div class="card">
 
@@ -99,4 +107,5 @@ p{
 
 </body>
 </html>
+
 
