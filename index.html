@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,47 +13,90 @@ body{
     margin:40px auto;
     padding:30px;
     line-height:1.8;
+    overflow-x:hidden;
+    position:relative;
 }
+
+/* Carta */
 .card{
     background:white;
     padding:35px;
     border-radius:14px;
     box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    position:relative;
+    z-index:2;
 }
+
+/* Título */
 h1{
     text-align:center;
     color:#b06a8d;
     margin-bottom:30px;
 }
+
 p{
     margin-bottom:16px;
+}
+
+/* Corazones flotantes */
+.heart{
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp linear infinite;
+    opacity:0.5;
+    z-index:1;
+}
+
+@keyframes floatUp{
+    0%{
+        transform: translateY(0) translateX(0);
+        opacity:0;
+    }
+    10%{
+        opacity:0.6;
+    }
+    100%{
+        transform: translateY(-110vh) translateX(30px);
+        opacity:0;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- Corazones -->
+<div class="heart" style="left:5%; animation-duration:12s;">💖</div>
+<div class="heart" style="left:15%; animation-duration:18s;">💕</div>
+<div class="heart" style="left:30%; animation-duration:14s;">💗</div>
+<div class="heart" style="left:45%; animation-duration:20s;">💓</div>
+<div class="heart" style="left:60%; animation-duration:16s;">💖</div>
+<div class="heart" style="left:75%; animation-duration:22s;">💕</div>
+<div class="heart" style="left:90%; animation-duration:15s;">💗</div>
+
 <div class="card">
 
 <h1>Solo quería decirte algo</h1>
 
-<p>No escribo esta carta esperando una respuesta inmediata ni queriendo presionarte de ninguna manera. Solo siento que necesito expresarte mejor lo que llevo tiempo sintiendo y pensando.</p>
+<p>No escribo esta carta esperando una respuesta inmediata, tampoco te quiero presionar de ninguna manera, sin embargo siento que necesito expresarte mejor lo que siento y pienso desde hace tiempo.</p>
 
-<p>En este tiempo que hemos estado separados he pensado mucho en nosotros, en lo que vivimos y en la forma en que pasaron las cosas. Y entre todo eso, hay algo que no puedo dejar de reconocer: me arrepiento del daño que pude haberte causado, de haberme ido y de la forma en que actué contigo. En ese momento creía que estaba justificado por cómo me sentía y por las inseguridades que llevaba dentro, pero hoy entiendo que las cosas pudieron haberse hablado mejor. No debí dejar que el orgullo o la confusión hablaran por mí.</p>
+<p>En este tiempo que hemos estado separados, he pensado mucho en nosotros, en lo que vivimos y en la forma en que pasaron las cosas, entre todo eso, hay algo que no puedo dejar de reconocer y es que me arrepiento de todo el mal que te hice, del haberme ido de tu lado, del tratarte como lo hice, pensaba en ese momento que estaba justificado por el cómo me estaba sintiendo, por lo mal que me sentía contigo y sobre todo por la inseguridad que cargaba conmigo mismo por no sentirme lo suficiente para ti, reconozco que las cosas se pudieron tratar de una forma diferente, pude hablar de una mejor forma, no tenía porqué dejar que mi orgullo o la confusión hablaran por mí.</p>
 
-<p>Te extraño más de lo que alguna vez imaginé. Te pienso desde que me despierto hasta que me vuelvo a dormir. Extraño tu forma de ser, la tranquilidad que sentía contigo, nuestras conversaciones, nuestra rutina sencilla, esos momentos cotidianos que hoy parecen enormes: ver una película, pedir algo de comer, compartir la comida, escucharte llamarme “Bibi”. Extraño esos pequeños espacios que para mí significaban mucho. Y no lo digo desde la costumbre, sino desde el amor.</p>
+<p>Te extraño más de lo que una vez imaginé, no puedo dejar de pensar en ti desde que me despierto hasta que me vuelvo a acostar, siento que te veo en todas partes y a la vez no estás en ninguna. Extraño tu forma de ser, la tranquilidad que sentía al estar contigo, la mujer que eres, todo lo que teníamos proyectado a hacer, extraño nuestras conversaciones, extraño nuestra pequeña rutina que llevábamos, extraño acostarnos en la cama y simplemente estar viendo una película o pedir un domicilio con entrada para probar, extraño compartir la comida contigo, extraño que me digas “Bibi” extraño todo y cada una de las cosas que hacíamos, tu forma de pensar, actuar, te extraño a ti y no lo digo desde la costumbre, lo digo desde el amor.</p>
 
-<p>También he pensado mucho en mí y en todo lo que debo mejorar. Quiero cambiar, crecer y aprender, no para alguien nuevo, sino porque entendí qué tipo de persona quiero ser y cómo quiero amar. Quisiera ser alguien que comunica mejor, que escucha más, que habla a tiempo y que sabe cuidar lo que es importante.</p>
+<p>He pensado mucho en que debo cambiar, mejorar como soy pero no para una persona nueva, porque sinceramente no me veo con otra persona que no seas tú, no quiero preguntar cual es el color favorito de alguien, no. Quiero que seas tú la persona con la que pueda crecer, tener un hogar, una familia. Quiero amarte de la forma en la que lo mereces, quiero ser un mejor hombre para ti, comunicar mejor las cosas, hablar a tiempo, no callarme y escucharte más, quiero que siempre tengas presente que estoy para ti, en todo momento.</p>
 
-<p>Quiero que sepas que todavía te amo. Amo recordarte, tu sonrisa, tu manera de hablar, la forma en la que ves el mundo. Amo todo lo que eres y todo lo que me hiciste sentir. Y aunque el tiempo haya pasado, sigo pensando que eres una persona muy especial para mí.</p>
+<p>Quiero que sepas que todavía te amo, amo recordarte, amo verte en mi teléfono en las fotos destacadas, amo tu sonrisa, tu cabello, la forma en la que hablas, lo estudiosa que eres, amo verte a ti, amo estar contigo, amo viajar contigo aunque hace mucho no lo hacemos y me gustaría retomar eso jajaja, amo verte en historias, amo tus caricias, amo tus besos, amo tus ojos, tus pecas, amo todo de ti, TE AMO A TI!</p>
 
-<p>No te escribo esto para pedirte nada ni para quitarte tranquilidad. Solo quería ser honesto contigo y conmigo mismo, porque sentía que callarlo ya no era posible.</p>
+<p>No te escribo esto para pedirte nada, ni quitarte tu tranquilidad. Solo quería que supieras lo que hay en mi corazón y en mi mente, porque siento que callarlo no sería honesto.</p>
 
-<p>Deseo sinceramente que estés bien y que la vida te esté dando cosas lindas, porque te mereces lo mejor del mundo. Y si en algún momento lo sientes bien para ti, me gustaría verte y poder conversar con calma.</p>
+<p>Deseo sinceramente que estés bien y que la vida te esté dando cosas lindas, porque te mereces lo mejor del mundo. También quisiera que nos veamos, quiero verte y hablar contigo, quiero que escuches todo lo que tengo por decirte.</p>
 
-<p>Con cariño.</p>
+<p><strong>Con cariño.</strong></p>
 
 </div>
 
 </body>
 </html>
+
