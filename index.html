@@ -1,110 +1,199 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Solo quería decirte algo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solo quería decirte algo</title>
 
-<style>
-body{
-    font-family:'Segoe UI', sans-serif;
-    background:#fff8fa;
-    color:#444;
-    max-width:750px;
-    margin:40px auto;
-    padding:30px;
-    line-height:1.8;
-    overflow-x:hidden;
-    position:relative;
-}
-
-/* Carta */
-.card{
-    background:white;
-    padding:35px;
-    border-radius:14px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.08);
-    position:relative;
-    z-index:2;
-}
-
-/* Título */
-h1{
-    text-align:center;
-    color:#b06a8d;
-    margin-bottom:30px;
-}
-
-p{
-    margin-bottom:16px;
-}
-
-/* Corazones */
-.heart{
-    position: fixed;
-    bottom: -80px;
-    font-size: 45px; /* MÁS GRANDES */
-    animation: floatUp linear infinite;
-    opacity:0.45;
-    z-index:1;
-    pointer-events:none;
-}
-
-@keyframes floatUp{
-    0%{
-        transform: translateY(0) translateX(0);
-        opacity:0;
+  <style>
+    :root{
+      --bg: #fff8fa;
+      --accent: #b06a8d;
+      --text: #444;
+      --card: #ffffff;
+      --shadow: rgba(0,0,0,0.08);
     }
-    10%{
-        opacity:0.5;
+
+    *{ box-sizing: border-box; }
+
+    body{
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+      overflow-x: hidden;
+      min-height: 100vh;
     }
-    100%{
-        transform: translateY(-120vh) translateX(40px);
-        opacity:0;
+
+    .wrap{
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 24px;
+      position: relative;
+      z-index: 2;
     }
-}
-</style>
+
+    .card{
+      background: var(--card);
+      padding: 34px;
+      border-radius: 16px;
+      box-shadow: 0 10px 26px var(--shadow);
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(2px);
+    }
+
+    h1{
+      margin: 0 0 26px 0;
+      text-align: center;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: .2px;
+      font-size: clamp(26px, 3.4vw, 34px);
+    }
+
+    p{ margin: 0 0 16px 0; }
+
+    .signature{
+      margin-top: 12px;
+      font-weight: 700;
+    }
+
+    /* Foto final */
+    .final{
+      margin-top: 26px;
+      text-align: center;
+    }
+
+    .final img{
+      width: 100%;
+      max-width: 520px;
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+      display: block;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 900ms ease, transform 900ms ease;
+    }
+
+    .final img.show{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .final-text{
+      margin-top: 14px;
+      font-size: clamp(18px, 2.6vw, 26px);
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    /* Corazones */
+    .heart{
+      position: fixed;
+      bottom: -120px;
+      font-size: 52px;           /* MÁS GRANDES */
+      opacity: 0.55;
+      z-index: 1;
+      pointer-events: none;
+      animation-name: floatUp;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      filter: drop-shadow(0 6px 10px rgba(0,0,0,0.08));
+    }
+
+    @keyframes floatUp{
+      0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+      12%  { opacity: 0.55; }
+      100% { transform: translateY(-130vh) translateX(60px) rotate(18deg); opacity: 0; }
+    }
+
+    /* Mejor lectura en móvil */
+    @media (max-width: 520px){
+      .wrap{ margin: 22px auto; padding: 16px; }
+      .card{ padding: 24px; border-radius: 14px; }
+      .heart{ font-size: 44px; }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Solo quería decirte algo</h1>
 
-<!-- MUCHOS CORAZONES -->
-<div class="heart" style="left:2%; animation-duration:10s;">💖</div>
-<div class="heart" style="left:8%; animation-duration:14s;">💕</div>
-<div class="heart" style="left:15%; animation-duration:12s;">💗</div>
-<div class="heart" style="left:22%; animation-duration:16s;">💓</div>
-<div class="heart" style="left:30%; animation-duration:11s;">💖</div>
-<div class="heart" style="left:38%; animation-duration:18s;">💕</div>
-<div class="heart" style="left:45%; animation-duration:13s;">💗</div>
-<div class="heart" style="left:52%; animation-duration:15s;">💓</div>
-<div class="heart" style="left:60%; animation-duration:12s;">💖</div>
-<div class="heart" style="left:68%; animation-duration:17s;">💕</div>
-<div class="heart" style="left:75%; animation-duration:11s;">💗</div>
-<div class="heart" style="left:82%; animation-duration:16s;">💓</div>
-<div class="heart" style="left:90%; animation-duration:13s;">💖</div>
-<div class="heart" style="left:96%; animation-duration:15s;">💕</div>
+      <p>No escribo esta carta esperando una respuesta inmediata, tampoco te quiero presionar de ninguna manera, sin embargo siento que necesito expresarte mejor lo que siento y pienso desde hace tiempo.</p>
 
-<div class="card">
+      <p>En este tiempo que hemos estado separados, he pensado mucho en nosotros, en lo que vivimos y en la forma en que pasaron las cosas, entre todo eso, hay algo que no puedo dejar de reconocer y es que me arrepiento de todo el mal que te hice, del haberme ido de tu lado, del tratarte como lo hice, pensaba en ese momento que estaba justificado por el cómo me estaba sintiendo, por lo mal que me sentía contigo y sobre todo por la inseguridad que cargaba conmigo mismo por no sentirme lo suficiente para ti, reconozco que las cosas se pudieron tratar de una forma diferente, pude hablar de una mejor forma, no tenía porqué dejar que mi orgullo o la confusión hablaran por mí.</p>
 
-<h1>Solo quería decirte algo</h1>
+      <p>Te extraño más de lo que una vez imaginé, no puedo dejar de pensar en ti desde que me despierto hasta que me vuelvo a acostar, siento que te veo en todas partes y a la vez no estás en ninguna. Extraño tu forma de ser, la tranquilidad que sentía al estar contigo, la mujer que eres, todo lo que teníamos proyectado a hacer, extraño nuestras conversaciones, extraño nuestra pequeña rutina que llevábamos, extraño acostarnos en la cama y simplemente estar viendo una película o pedir un domicilio con entrada para probar, extraño compartir la comida contigo, extraño que me digas “Bibi” extraño todo y cada una de las cosas que hacíamos, tu forma de pensar, actuar, te extraño a ti y no lo digo desde la costumbre, lo digo desde el amor.</p>
 
-<p>No escribo esta carta esperando una respuesta inmediata, tampoco te quiero presionar de ninguna manera, sin embargo siento que necesito expresarte mejor lo que siento y pienso desde hace tiempo.</p>
+      <p>He pensado mucho en que debo cambiar, mejorar como soy poruqe quiero que seas tú la persona con la que pueda crecer, tener un hogar, una familia. Quiero amarte de la forma en la que lo mereces, quiero ser un mejor hombre para ti, comunicar mejor las cosas, hablar a tiempo, no callarme y escucharte más, quiero que siempre tengas presente que estoy para ti, en todo momento.</p>
 
-<p>En este tiempo que hemos estado separados, he pensado mucho en nosotros, en lo que vivimos y en la forma en que pasaron las cosas, entre todo eso, hay algo que no puedo dejar de reconocer y es que me arrepiento de todo el mal que te hice, del haberme ido de tu lado, del tratarte como lo hice, pensaba en ese momento que estaba justificado por el cómo me estaba sintiendo, por lo mal que me sentía contigo y sobre todo por la inseguridad que cargaba conmigo mismo por no sentirme lo suficiente para ti, reconozco que las cosas se pudieron tratar de una forma diferente, pude hablar de una mejor forma, no tenía porqué dejar que mi orgullo o la confusión hablaran por mí.</p>
+      <p>Quiero que sepas que todavía te amo, amo recordarte, amo verte en mi teléfono en las fotos destacadas, amo tu sonrisa, tu cabello, la forma en la que hablas, lo estudiosa que eres, amo verte a ti, amo estar contigo, amo viajar contigo aunque hace mucho no lo hacemos y me gustaría retomar eso jajaja, amo verte en historias, amo tus caricias, amo tus besos, amo tus ojos, tus pecas, amo todo de ti, TE AMO A TI!</p>
 
-<p>Te extraño más de lo que una vez imaginé, no puedo dejar de pensar en ti desde que me despierto hasta que me vuelvo a acostar, siento que te veo en todas partes y a la vez no estás en ninguna. Extraño tu forma de ser, la tranquilidad que sentía al estar contigo, la mujer que eres, todo lo que teníamos proyectado a hacer, extraño nuestras conversaciones, extraño nuestra pequeña rutina que llevábamos, extraño acostarnos en la cama y simplemente estar viendo una película o pedir un domicilio con entrada para probar, extraño compartir la comida contigo, extraño que me digas “Bibi” extraño todo y cada una de las cosas que hacíamos, tu forma de pensar, actuar, te extraño a ti y no lo digo desde la costumbre, lo digo desde el amor.</p>
+      <p>No te escribo esto para pedirte nada, ni quitarte tu tranquilidad. Solo quería que supieras lo que hay en mi corazón y en mi mente, porque siento que callarlo no sería honesto.</p>
 
-<p>He pensado mucho en que debo cambiar, mejorar como soy pero no para una persona nueva, porque sinceramente no me veo con otra persona que no seas tú, no quiero preguntar cual es el color favorito de alguien, no. Quiero que seas tú la persona con la que pueda crecer, tener un hogar, una familia. Quiero amarte de la forma en la que lo mereces, quiero ser un mejor hombre para ti, comunicar mejor las cosas, hablar a tiempo, no callarme y escucharte más, quiero que siempre tengas presente que estoy para ti, en todo momento.</p>
+      <p>Deseo sinceramente que estés bien y que la vida te esté dando cosas lindas, porque te mereces lo mejor del mundo. También quisiera que nos veamos, quiero verte y hablar contigo, quiero que escuches todo lo que tengo por decirte</p>
 
-<p>Quiero que sepas que todavía te amo, amo recordarte, amo verte en mi teléfono en las fotos destacadas, amo tu sonrisa, tu cabello, la forma en la que hablas, lo estudiosa que eres, amo verte a ti, amo estar contigo, amo viajar contigo aunque hace mucho no lo hacemos y me gustaría retomar eso jajaja, amo verte en historias, amo tus caricias, amo tus besos, amo tus ojos, tus pecas, amo todo de ti, TE AMO A TI!</p>
+      <p class="signature"><strong>Con cariño.</strong></p>
 
-<p>No te escribo esto para pedirte nada, ni quitarte tu tranquilidad. Solo quería que supieras lo que hay en mi corazón y en mi mente, porque siento que callarlo no sería honesto.</p>
+      <div class="final">
+        <img id="finalPhoto" src="IMG_2444.JPEG" alt="Nosotros" />
+        <div class="final-text">Quiero que volvamos a ser ellos 💖</div>
+      </div>
+    </div>
+  </div>
 
-<p>Deseo sinceramente que estés bien y que la vida te esté dando cosas lindas, porque te mereces lo mejor del mundo. También quisiera que nos veamos, quiero verte y hablar contigo, quiero que escuches todo lo que tengo por decirte.</p>
+  <script>
+    // =========================
+    //  1) MUCHOS CORAZONES
+    // =========================
+    const heartEmojis = ["💖","💕","💗","💓","💞","💘"];
+    const HEART_COUNT = 34; // MÁS cantidad (sube/baja si quieres)
 
-<p><strong>Con cariño.</strong></p>
+    function rand(min, max){ return Math.random() * (max - min) + min; }
 
-</div>
+    for(let i=0;i<HEART_COUNT;i++){
+      const h = document.createElement("div");
+      h.className = "heart";
+      h.textContent = heartEmojis[Math.floor(Math.random()*heartEmojis.length)];
 
+      // Posición horizontal
+      h.style.left = rand(0, 100) + "%";
+
+      // Duración y retraso para que no salgan todos a la vez
+      const dur = rand(9, 20);           // segundos
+      const delay = rand(0, 10);         // segundos
+      h.style.animationDuration = dur + "s";
+      h.style.animationDelay = "-" + delay + "s"; // arranca "ya" en diferentes puntos
+
+      // Tamaño variable (más dinámico)
+      const size = rand(42, 72);
+      h.style.fontSize = size + "px";
+
+      // Opacidad variable
+      h.style.opacity = rand(0.25, 0.65);
+
+      document.body.appendChild(h);
+    }
+
+    // =========================
+    //  2) Foto aparece suave
+    // =========================
+    const img = document.getElementById("finalPhoto");
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          img.classList.add("show");
+        }
+      });
+    }, { threshold: 0.35 });
+
+    obs.observe(img);
+  </script>
 </body>
 </html>
 
